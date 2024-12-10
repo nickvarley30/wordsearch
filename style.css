@@ -1,0 +1,89 @@
+/* General styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #4facfe, #00f2fe);
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container styles */
+.container {
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Header styling */
+header h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+/* Grid styling */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  grid-gap: 5px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.grid div {
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.3s;
+}
+
+.grid div:hover {
+  background: #00bcd4;
+  color: #fff;
+}
+
+/* Word list styling */
+.word-list {
+  text-align: left;
+}
+
+.word-list h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.word-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.word-list li {
+  font-size: 1em;
+  margin: 5px 0;
+}
+
+/* Footer styling */
+footer {
+  margin-top: 20px;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
