@@ -1,4 +1,4 @@
-const words = ["JAVASCRIPT", "HTML", "CSS", "CODE", "GRID", "WEB", "GAME", "SEARCH"];
+const words = ["ROLLERCOASTER", "FERRISWHEEL", "CAROUSEL", "BUMPERCARS", "LOGFLUME", "HAUNTEDHOUSE", "WATERPARK", "THRILLRIDE"];
 const gridSize = 10;
 let selectedCells = [];
 let grid = [];
@@ -93,7 +93,24 @@ function checkSelectedCells() {
     }).join("");
 
     if (words.includes(selectedWord)) {
-        alert(`You found the word: ${selectedWord}`);
+        alert(`Great job! You found the word: ${selectedWord}`);
+        selectedCells = [];
+        document.querySelectorAll(".cell.selected").forEach(cell => cell.classList.remove("selected"));
+
+        // Check if all words are found
+        const foundWords = document.querySelectorAll(".word-list li.found").length;
+        if (foundWords + 1 === words.length) {
+            alert("Congratulations! You've found all the words and completed the Word Search!");
+        } else {
+            document.querySelectorAll(".word-list li").forEach(li => {
+                if (li.textContent === selectedWord) li.classList.add("found");
+            });
+        }
+    }
+}).join("");
+
+    if (words.includes(selectedWord)) {
+        alert(`Great job! You found the word: ${selectedWord}`);
         selectedCells = [];
         document.querySelectorAll(".cell.selected").forEach(cell => cell.classList.remove("selected"));
     }
